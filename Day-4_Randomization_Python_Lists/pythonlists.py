@@ -28,3 +28,6 @@ print(states_of_america)
 
 # list.clear()
 # Remove all items from the list. Equivalent to del a[:].
+
+# below will give an error, if we want to access element with index more than list length.
+print(dirty_dozen[100])
