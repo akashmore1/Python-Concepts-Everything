@@ -5,6 +5,7 @@ def paint_calc(height, width, cover):
     else:
         num_cans = int(area / cover) + 1
     print(f"You'll need {num_cans} cans of paint.")
+# For above we can use num_cans = math.ceil(area / cover) as well.
 
 
 test_h = int(input("Height of wall: "))
