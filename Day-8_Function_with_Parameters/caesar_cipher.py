@@ -35,8 +35,19 @@ def ecrypt_msg(msg, key):
         encrypted_msg_arr.append(alphabet[modified_index])
 
     encrypted_msg = ''.join(encrypted_msg_arr)
-    print(encrypted_msg)
+    print(f'Encoded message is {encrypted_msg}')
+
+
+def decrypt_msg(msg, key):
+    decrypt_msg = ''
+    for letter in msg:
+        index = alphabet.index(letter)
+        modified_index = index - key
+        decrypt_msg += alphabet[modified_index]
+    print(f'Decoded message is{decrypt_msg}')
 
 
 if direction == 'encode':
     ecrypt_msg(msg=text, key=shift)
+elif direction == 'decode':
+    decrypt_msg(msg=text, key=shift)
