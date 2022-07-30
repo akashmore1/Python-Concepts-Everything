@@ -51,3 +51,33 @@ if direction == 'encode':
     ecrypt_msg(msg=text, key=shift)
 elif direction == 'decode':
     decrypt_msg(msg=text, key=shift)
+
+# Refactoring code:
+
+
+def caesar(msg, key, direction):
+    encrypted_msg_arr = []
+    key = key % 26
+    for letter in msg:
+        index = alphabet.index(letter)
+        if direction == "encode":
+            modified_index = index + key
+        elif direction == "decode":
+            modified_index = index - key
+        if modified_index > 25:
+            modified_index = modified_index - 26
+        encrypted_msg_arr.append(alphabet[modified_index])
+
+    encrypted_msg = ''.join(encrypted_msg_arr)
+    print(f'Encoded message is {encrypted_msg}')
+
+
+to_continue = True
+while to_continue:
+    direction = input("Type 'encode' to encrypt, type 'decode' to decrypt:\n")
+    text = input("Type your message:\n").lower()
+    shift = int(input("Type the shift number:\n"))
+    caesar(direction=direction, msg=text, key=shift)
+    caeser_again = input("Do you want to continue? (yes/no)\n")
+    if caeser_again == 'no':
+        to_continue = False
