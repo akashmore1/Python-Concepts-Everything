@@ -62,3 +62,7 @@ def correct_modify_global_var():
 
 var_global = correct_modify_global_var()
 # In this way we should modify global variable
+
+
+# While declaring global variables, use variable name in all capital
+URL = 'www.google.com'
