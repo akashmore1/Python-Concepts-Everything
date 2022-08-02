@@ -33,8 +33,8 @@
 # Hint 4: Create a deal_card() function that uses the List below to *return* a random card.
 # 11 is the Ace.
 import random
-from replit import clear
-from art import logo
+# from replit import clear
+# from art import logo
 
 
 def deal_card():
@@ -86,7 +86,7 @@ def compare(user_score, computer_score):
 
 def play_game():
 
-    print(logo)
+    # print(logo)
 
     # Hint 5: Deal the user and computer 2 cards each using deal_card()
     user_cards = []
@@ -130,5 +130,5 @@ def play_game():
 
 # Hint 14: Ask the user if they want to restart the game. If they answer yes, clear the console and start a new game of blackjack and show the logo from art.py.
 while input("Do you want to play a game of Blackjack? Type 'y' or 'n': ") == "y":
-    clear()
+    # clear()
     play_game()
