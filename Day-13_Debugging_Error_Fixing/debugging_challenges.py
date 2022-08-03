@@ -1,4 +1,5 @@
 # 1
+from random import randint
 number = int(input("Which number do you want to check?"))
 if number % 2 == 0:
     print("This is an even number.")
@@ -14,3 +15,10 @@ def my_function():
 
 
 my_function()
+
+
+# 3
+
+dice_imgs = ["❶", "❷", "❸", "❹", "❺", "❻"]
+dice_num = randint(0, 5)
+print(dice_imgs[dice_num], dice_num)
